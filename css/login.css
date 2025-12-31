@@ -1,21 +1,13 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CORE • Login</title>
+function login() {
+  const user = document.getElementById("user").value;
+  const pass = document.getElementById("pass").value;
 
-<link rel="stylesheet" href="css/login.css">
-</head>
-<body>
+  if (!user || !pass) {
+    alert("Preencha tudo");
+    return;
+  }
 
-<div class="login-box">
-  <h1>CORE</h1>
-  <input id="user" placeholder="Usuário">
-  <input id="pass" type="password" placeholder="Senha">
-  <button onclick="login()">Entrar</button>
-</div>
-
-<script src="js/login.js"></script>
-</body>
-</html>
+  // temporário
+  localStorage.setItem("token", "mock-token");
+  location.href = "app.html";
+}
