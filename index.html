@@ -1,21 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CORE • Login</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CORE • Login</title>
 
-<link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
 
-<div class="login-box">
-  <h1>CORE</h1>
-  <input id="user" placeholder="Usuário">
-  <input id="pass" type="password" placeholder="Senha">
-  <button onclick="login()">Entrar</button>
-</div>
+  <div class="login-container">
+    <h1>CORE</h1>
 
-<script src="js/login.js"></script>
+    <input
+      id="username"
+      type="text"
+      placeholder="Seu nome"
+      autocomplete="off"
+    >
+
+    <input
+      id="password"
+      type="password"
+      placeholder="Senha (6 dígitos)"
+      maxlength="6"
+      inputmode="numeric"
+    >
+
+    <button onclick="login()">Entrar</button>
+  </div>
+
+  <script src="js/login.js"></script>
 </body>
 </html>
